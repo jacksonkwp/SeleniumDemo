@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Selenium Demo</title>
+		<link rel="stylesheet" th:href="@{/styles.css}" />
+	</head>
+	
+	<body>
+		<h1>Add an Item</h1>
+		
+		<form method="POST" th:object="${item}">
+			<h3>Enter Some Text:</h3>
+			<input type="text" th:field="*{name}"/>
+			<span class="validationError"
+					th:if="${#fields.hasErrors('name')}"
+					th:errors="*{name}">Error</span>
+			<br/>
+			<button>Add Item</button>
+		</form>
+		
+		<a href="/">View Items</a>
+	</body>
+</html>
