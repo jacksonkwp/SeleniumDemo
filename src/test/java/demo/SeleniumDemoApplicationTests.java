@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 @SpringBootTest
 class SeleniumDemoApplicationTests {
 	
-	static final String DRIVER_PATH = "C:\\Users\\jacks\\chromeDriver\\chromedriver.exe";
+	static final String DRIVER_PATH = "";
 	
 	WebDriver driver;
 	
